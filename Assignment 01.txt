@@ -1,0 +1,927 @@
+DARSHANA JAYSANTHA. 65 BATCH
+
+01.
+
+import javax.swing.*;
+
+class FirstFrame {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+        
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(300,300); 
+
+        frame.setTitle("My First Frame");
+
+        frame.setVisible(true); 
+
+	}
+}
+
+
+02.
+
+
+import java.awt.*;
+import javax.swing.*;
+
+class BorderLayoutExample{
+
+	public static void main(String[] args){
+
+        JFrame frame = new JFrame();
+        
+		JPanel panel = new JPanel();
+
+		panel.setLayout(new BorderLayout());
+
+		panel.add(new JButton("North"), BorderLayout.NORTH);
+
+		panel.add(new JButton("South"), BorderLayout.SOUTH);
+
+		panel.add(new JButton("East"), BorderLayout.EAST);
+
+		panel.add(new JButton("West"), BorderLayout.WEST);
+
+		panel.add(new JButton("Center"), BorderLayout.CENTER);
+
+        frame.add(panel);
+  
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  
+        frame.setSize(300, 300);
+
+        frame.setTitle("Border Layout Window");
+  
+        frame.setVisible(true);
+    }
+		
+}
+
+
+
+03.
+
+import javax.swing.*;
+import java.awt.*;
+
+class JlabelExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JPanel panel = new JPanel(new BorderLayout());
+
+        JLabel label1 = new JLabel("This is the North Border");
+        label1.setHorizontalAlignment(JLabel.CENTER);
+        panel.add(label1, BorderLayout.NORTH);
+
+        JLabel label2 = new JLabel("his is the South Border");
+        label2.setHorizontalAlignment(JLabel.CENTER);
+        panel.add(label2, BorderLayout.SOUTH);
+       
+        frame.add(panel);       
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(400,200); 
+
+        frame.setTitle("Border Layout Window");
+
+        frame.setVisible(true); 
+
+	}
+}
+
+
+04.
+
+import javax.swing.*;
+import java.awt.*;
+
+class JlabelExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JPanel panel = new JPanel(new BorderLayout());
+
+        JLabel label1 = new JLabel("This is the North Border");
+        label1.setHorizontalAlignment(JLabel.CENTER);
+        label1.setFont(new Font("Calibri", Font.BOLD, 30));
+        panel.add(label1, BorderLayout.NORTH);
+
+        JLabel label2 = new JLabel("his is the South Border");
+        label2.setHorizontalAlignment(JLabel.CENTER);
+        label2.setFont(new Font("Calibri", Font.BOLD, 30));
+        panel.add(label2, BorderLayout.SOUTH);
+       
+        frame.add(panel);       
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(400,200); 
+
+        frame.setTitle("Border Layout Window");
+
+        frame.setVisible(true); 
+
+	}
+}
+
+
+05.
+
+
+import javax.swing.*;
+import java.awt.*;
+
+class FlowLayoutExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JButton b1=new JButton("Button1");
+        JButton b2=new JButton("This is a button");  
+        JButton b3=new JButton("Button2");  
+        JButton b4=new JButton("Execute");
+
+        frame.add(b1); 
+        frame.add(b2);
+        frame.add(b3);
+
+        frame.setLayout(new FlowLayout(FlowLayout.CENTER)); 
+
+        frame.add(b4);
+        frame.setLayout(new FlowLayout(FlowLayout.CENTER));       
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(400,200); 
+
+        frame.setTitle("Flow Layout Window");
+
+        frame.setVisible(true); 
+
+	}
+}
+
+
+06.
+
+
+import javax.swing.*;
+import java.awt.*;
+
+class FlowLayoutExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JButton b1=new JButton("Button1");
+        JButton b2=new JButton("This is a button");  
+        JButton b3=new JButton("Button2");  
+        JButton b4=new JButton("Execute");
+
+        frame.add(b1); 
+        frame.add(b2);
+        frame.add(b3);
+
+        frame.setLayout(new FlowLayout(FlowLayout.LEFT)); 
+
+        frame.add(b4);
+        frame.setLayout(new FlowLayout(FlowLayout.LEFT));       
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(400,200); 
+
+        frame.setTitle("Flow Layout Window");
+
+        frame.setVisible(true); 
+
+	}
+}
+
+
+07.
+
+
+import javax.swing.*;
+import java.awt.*;
+
+class FlowLayoutExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JButton b1=new JButton("Button1");
+        JButton b2=new JButton("This is a button");  
+        JButton b3=new JButton("Button2");  
+        JButton b4=new JButton("Execute");
+
+        frame.add(b1); 
+        frame.add(b2);
+        frame.add(b3);
+
+        frame.setLayout(new FlowLayout(FlowLayout.RIGHT)); 
+
+        frame.add(b4);
+        frame.setLayout(new FlowLayout(FlowLayout.RIGHT));       
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(400,200); 
+
+        frame.setTitle("Flow Layout Window");
+
+        frame.setVisible(true); 
+
+	}
+}
+
+
+08.
+
+
+import javax.swing.*;
+import java.awt.*;
+
+class GridLayoutExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JButton b1=new JButton("1");
+        JButton b2=new JButton("2");  
+        JButton b3=new JButton("3");  
+        JButton b4=new JButton("4");
+
+        frame.add(b1); 
+        frame.add(b2);
+        frame.add(b3);
+        frame.add(b4);
+
+        frame.setLayout(new GridLayout(2,2));       
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(300,300); 
+
+        frame.setTitle("GridLayout Window");
+
+        frame.setVisible(true); 
+
+	}
+}
+
+
+09.
+
+
+import javax.swing.*;
+import java.awt.*;
+
+class GridLayoutExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JButton b1=new JButton("7");
+        JButton b2=new JButton("8");  
+        JButton b3=new JButton("9");  
+        JButton b4=new JButton("*");
+        JButton b5=new JButton("4");
+        JButton b6=new JButton("5");  
+        JButton b7=new JButton("6");  
+        JButton b8=new JButton("/");
+        JButton b9=new JButton("1");
+        JButton b10=new JButton("2");  
+        JButton b11=new JButton("3");  
+        JButton b12=new JButton("+");
+        JButton b13=new JButton("0");
+        JButton b14=new JButton(".");  
+        JButton b15=new JButton("=");  
+        JButton b16=new JButton("-");
+
+        frame.add(b1); 
+        frame.add(b2);
+        frame.add(b3);
+        frame.add(b4);
+        frame.add(b5); 
+        frame.add(b6);
+        frame.add(b7);
+        frame.add(b8);
+        frame.add(b9); 
+        frame.add(b10);
+        frame.add(b11);
+        frame.add(b12);
+        frame.add(b13); 
+        frame.add(b14);
+        frame.add(b15);
+        frame.add(b16);
+
+        frame.setLayout(new GridLayout(4,4));       
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(300,300); 
+
+        frame.setTitle("Calculator");
+
+        frame.setVisible(true);
+	}
+}
+
+
+10. 
+
+11. 
+
+
+import javax.swing.*;
+import java.awt.*;
+
+class JpanelExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+ 
+        JPanel panel = new JPanel();
+
+        JPanel panel2 = new JPanel();
+
+        JButton b1=new JButton("1");
+        JButton b2=new JButton("2");  
+        JButton b3=new JButton("3");  
+        JButton b4=new JButton("4");
+
+        panel2.add(b1); 
+        panel2.add(b2);
+        panel2.add(b3);
+        panel2.add(b4);
+
+        panel2.setLayout(new GridLayout(2,2)); 
+        
+		panel.setLayout(new BorderLayout());
+
+		panel.add(new JButton("North"), BorderLayout.NORTH);
+
+		panel.add(new JButton("South"), BorderLayout.SOUTH);
+
+		panel.add(new JButton("East"), BorderLayout.EAST);
+
+		panel.add(new JButton("West"), BorderLayout.WEST);
+
+		panel.add(panel2, BorderLayout.CENTER);
+
+        frame.add(panel);
+  
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+  
+        frame.setSize(300, 300);
+
+        frame.setTitle("Jpanel is a Container");
+  
+        frame.setVisible(true);
+	}
+}
+
+
+12.
+
+
+13.
+
+import javax.swing.*;
+import java.awt.*;
+
+class Calculator {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JPanel p1 = new JPanel();
+        p1.setLayout(new FlowLayout());
+        JTextField textField = new JTextField(16);
+        textField.setEditable(false);
+        p1.add(textField);
+
+        JPanel p2 = new JPanel();
+
+        JButton b1=new JButton("7");
+        JButton b2=new JButton("8");  
+        JButton b3=new JButton("9");  
+        JButton b4=new JButton("*");
+        JButton b5=new JButton("4");
+        JButton b6=new JButton("5");  
+        JButton b7=new JButton("6");  
+        JButton b8=new JButton("/");
+        JButton b9=new JButton("1");
+        JButton b10=new JButton("2");  
+        JButton b11=new JButton("3");  
+        JButton b12=new JButton("+");
+        JButton b13=new JButton("0");
+        JButton b14=new JButton(".");  
+        JButton b15=new JButton("=");  
+        JButton b16=new JButton("-");
+
+        p2.add(b1); 
+        p2.add(b2);
+        p2.add(b3);
+        p2.add(b4);
+        p2.add(b5); 
+        p2.add(b6);
+        p2.add(b7);
+        p2.add(b8);
+        p2.add(b9); 
+        p2.add(b10);
+        p2.add(b11);
+        p2.add(b12);
+        p2.add(b13); 
+        p2.add(b14);
+        p2.add(b15);
+        p2.add(b16);
+
+        p2.setLayout(new GridLayout(4,4));   
+
+        frame.add(p1);
+
+        frame.add(p2);   
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(300,300); 
+
+        frame.setTitle("Calculator");
+
+        frame.setVisible(true);	}
+}
+
+
+14.
+
+
+import javax.swing.*;
+import java.awt.*;
+
+class TextFieldExample {
+	public static void main(String args[]){
+
+        JFrame frame = new JFrame();
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+
+        JTextField textField = new JTextField(8);
+
+        textField.setText("Niroth....");
+        textField.setHorizontalAlignment(JTextField.RIGHT); 
+        textField.setFont(new Font("Calibri", Font.BOLD, 20)); 
+         
+        panel.add(textField);
+        frame.add(panel); 
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends program when JFrame closed
+
+        frame.setSize(300,300); 
+
+        frame.setTitle("Demostrate TextField");
+
+        frame.setVisible(true); 
+
+	}
+}
+
+
+15. 
+
+16. It pops up simple window titled with 'Demostrate Jlabel' and top of the window there is a text "This is a JLable"
+
+17. The code pops up the window with the text "This is a JLable" in italic font
+
+18.
+
+19.
+
+Output:
+
+Note: Demo.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+20. 
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class myFirstFrame extends JFrame{
+	private JTextField Txt1;
+	private JTextField Txt2;
+	private JTextField Txt3;
+	private JTextField Txt4;
+	private JLabel lbl1;
+	private JLabel lbl2;
+	private JLabel lbl3;
+	private JLabel lbl4;
+	private JPanel p1;
+	private JPanel p2;
+myFirstFrame(){
+	setSize(400,300);
+	setTitle("Student Detail form");
+	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		p1=new JPanel(new GridLayout(4,1));
+		p2=new JPanel(new GridLayout(4,1));
+		Txt1 = new JTextField(20);
+		Txt2 = new JTextField(20);
+		Txt3 = new JTextField(20);
+		Txt4 = new JTextField(20);
+		lbl1 = new JLabel("Stdent Id");
+		lbl2 = new JLabel("Name");
+		lbl3 = new JLabel("Address");
+		lbl4 = new JLabel("Phone No");
+			p1.add(lbl1);
+			p1.add(lbl2);
+			p1.add(lbl3);
+			p1.add(lbl4);
+			p2.add(Txt1);
+			p2.add(Txt2);
+			p2.add(Txt3);
+			p2.add(Txt4);
+			add(p1);
+			add(p2,BorderLayout.LINE_END);
+		}
+}
+class Demo{
+public static void main(String args[]){
+	myFirstFrame f1 =new myFirstFrame();
+	f1.setVisible(true);
+	}
+
+}
+
+21. 
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class myFirstFrame extends JFrame{
+private JTextField Txt1;
+private JTextField Txt2;
+private JTextField Txt3;
+private JTextField Txt4;
+private JLabel lbl1;
+private JLabel lbl2;
+private JLabel lbl3;
+private JLabel lbl4;
+private JLabel heading;
+private JButton add;
+private JButton cancel;
+private JPanel p1;
+private JPanel p2;
+private JPanel p3;
+private JPanel p4;
+myFirstFrame(){
+setSize(400,300);
+setTitle("Student Detail form");
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	p1=new JPanel(new GridLayout(4,1));
+	p2=new JPanel(new GridLayout(4,1));
+	p3=new JPanel();
+	p4=new JPanel();
+	Txt1 = new JTextField(20);
+	Txt2 = new JTextField(20);
+	Txt3 = new JTextField(20);
+	Txt4 = new JTextField(20);
+	lbl1 = new JLabel("Stdent Id");
+	lbl2 = new JLabel("Name");
+	lbl3 = new JLabel("Address");
+	lbl4 = new JLabel("Phone No");
+	heading = new JLabel("Student Details Form");
+	add = new JButton("Add Student");
+	cancel = new JButton("cancel");
+		p1.add(lbl1);
+		p1.add(lbl2);
+		p1.add(lbl3);
+		p1.add(lbl4);
+		p2.add(Txt1);
+		p2.add(Txt2);
+		p2.add(Txt3);
+		p2.add(Txt4);
+		p3.add(heading);
+		p4.add(add);
+		p4.add(cancel);
+		add(p1);
+		add(p2,BorderLayout.LINE_END);
+		add(p3,BorderLayout.PAGE_START);
+		add(p4,BorderLayout.PAGE_END);
+    }
+}
+class firstFrame{
+public static void main(String args[]){
+     myFirstFrame f1 =new myFirstFrame();
+      f1.setVisible(true);
+   }
+}
+
+
+22. Pops up window with text "This is toogle button" and button "Yes/No". it is two-states button.
+
+23. 
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class myFirstFrame extends JFrame{
+	private JTextField Txt1;
+	private JTextField Txt2;
+	private JLabel lbl1;
+	private JLabel lbl2;
+	private JLabel lbl3;
+	private JRadioButton male;
+	private JRadioButton female;
+	private JLabel heading;
+	private JButton add;
+	private JButton cancel;
+	private JPanel p1;
+	private JPanel p2;
+	private JPanel p3;
+	private JPanel p4;
+	private JPanel p5;
+myFirstFrame(){
+setSize(400,300);
+setTitle("Student Detail form");
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+p1=new JPanel(new GridLayout(3,1));
+p2=new JPanel(new GridLayout(3,1));
+p3=new JPanel();
+p4=new JPanel();
+p5=new JPanel(new GridLayout(1,2));
+male=new JRadioButton("male");
+female=new JRadioButton("female");
+Txt1 = new JTextField(20);
+Txt2 = new JTextField(20);
+lbl1 = new JLabel("Name");
+lbl2 = new JLabel("Address");
+lbl3 = new JLabel("Gender");
+heading = new JLabel("Student Detail");
+add = new JButton("Add Student");
+cancel = new JButton("cancel");
+	p1.add(lbl1);
+	p1.add(lbl2);
+	p1.add(lbl3);
+	p2.add(Txt1);
+	p2.add(Txt2);
+	p5.add(male);
+	p5.add(female);
+	p2.add(p5);
+	p3.add(heading);
+	p4.add(add);
+	p4.add(cancel);
+	add(p1);
+	add(p2,BorderLayout.LINE_END);
+	add(p3,BorderLayout.PAGE_START);
+	add(p4,BorderLayout.PAGE_END);
+     }
+   }
+ }
+class Demo{
+	public static void main(String args[]){
+		myFirstFrame f1 =new myFirstFrame();
+		f1.setVisible(true);
+    }
+ }
+
+24. Plain check box should be the default selected one.
+
+25. Selected Date should be 2013 April 6. In Month Combo Box showing maximum row count is 4.
+
+26. 
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class myFirstFrame extends JFrame{
+private JLabel heading;
+private JPanel p1;
+private JPanel p2;
+private JSlider s1;
+private JSlider s2;
+private JSlider s3;
+private JSlider s4;
+private JSlider s5;
+private JSlider s6;
+private JSlider s7;
+private JSlider s8;
+private JSlider s9;
+private JSlider s10;
+myFirstFrame(){
+setSize(420,620);
+setTitle("Audio Equalizer");
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setLocationRelativeTo(null);
+heading= new JLabel("Equalizer");
+heading.setFont(new Font("",Font.BOLD,40));
+p1 =new JPanel();
+p2=new JPanel(new GridLayout(1,10,5,5));
+p1.add(heading);
+s1=new JSlider();
+s2=new JSlider();
+s3=new JSlider();
+s4=new JSlider();
+s5=new JSlider();
+s6=new JSlider();
+s7=new JSlider();
+s8=new JSlider();
+s9=new JSlider();
+s10=new JSlider();
+	s1.setOrientation(SwingConstants.VERTICAL);
+	s2.setOrientation(SwingConstants.VERTICAL);
+	s3.setOrientation(SwingConstants.VERTICAL);
+	s4.setOrientation(SwingConstants.VERTICAL);
+	s5.setOrientation(SwingConstants.VERTICAL);
+	s6.setOrientation(SwingConstants.VERTICAL);
+	s7.setOrientation(SwingConstants.VERTICAL);
+	s8.setOrientation(SwingConstants.VERTICAL);
+	s9.setOrientation(SwingConstants.VERTICAL);
+	s10.setOrientation(SwingConstants.VERTICAL);
+	p2.add(s1);
+	p2.add(s2);
+	p2.add(s3);
+	p2.add(s4);
+	p2.add(s5);
+	p2.add(s6);
+	p2.add(s7);
+	p2.add(s8);
+	p2.add(s9);
+	p2.add(s10);
+	add(p1,BorderLayout.PAGE_START);
+	add(p2,BorderLayout.CENTER);
+ }
+}
+class Demo{
+public static void main(String args[]){
+	myFirstFrame f1 =new myFirstFrame();
+	f1.setVisible(true);
+   }
+}
+
+27. 
+
+28. 
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class myFirstFrame extends JFrame{
+private JRadioButton b1;
+private JRadioButton b2;
+private JRadioButton b3;
+private JRadioButton b4;
+private JRadioButton b5;
+private JPanel p1;
+private JLabel lbl1;
+private ImageIcon pig;
+myFirstFrame(){
+setSize(400,400);
+setTitle("Login");
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setLocationRelativeTo(null);
+
+	b1=new JRadioButton("Bird");
+	b2=new JRadioButton("Cat");
+	b3=new JRadioButton("Dog");
+	b4=new JRadioButton("Rabbit");
+	b5=new JRadioButton("Pig");
+	p1=new JPanel(new GridLayout(5,1));
+	p1.add(b1);
+	p1.add(b2);
+	p1.add(b3);
+	p1.add(b4);
+	p1.add(b5);
+   }
+}
+class Demo{
+public static void main(String args[]){
+	myFirstFrame f1 =new myFirstFrame();
+	f1.setVisible(true);
+	}
+}
+
+29.
+
+30.
+
+
+31.
+
+import javax.swing.*; 
+ 
+public class SliderExample extends JFrame{ 
+ 
+    public SliderExample() {  
+        JSlider slider = new JSlider(JSlider.HORIZONTAL, 0, 50, 25);  
+        slider.setMinorTickSpacing(2);  
+        slider.setMajorTickSpacing(10);  
+        slider.setPaintTicks(true);  
+        slider.setPaintLabels(true);  
+  
+        JPanel panel=new JPanel();  
+        panel.add(slider);  
+        add(panel);  
+    }  
+
+    public static void main(String s[]) {  
+        SliderExample frame=new SliderExample();  
+        frame.pack();  
+        frame.setVisible(true);  
+    }  
+} 
+
+32. 
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class myFirstFrame extends JFrame{
+private JPanel p1;
+private JPanel p2;
+private JPanel p3;
+JSlider slider1;
+JSlider slider2;
+JSlider slider3;
+myFirstFrame(){
+setSize(600,600);
+setTitle("Slider Example");
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setLocationRelativeTo(null);
+setLayout(new GridLayout(3,1));
+		p1 = new JPanel();
+		p2 = new JPanel();
+		p3 = new JPanel();
+		slider1 = new JSlider(0,100);
+		slider2 = new JSlider(0,100);
+		slider3 = new JSlider(0,100);
+		slider1.setPreferredSize(new Dimension(400,200));
+		slider2.setPreferredSize(new Dimension(400,200));
+		slider2.setPaintTicks(true);
+		slider2.setMinorTickSpacing(5);
+		slider2.setPaintTrack(true);
+		slider2.setMajorTickSpacing(20);
+		slider3.setPreferredSize(new Dimension(400,200));
+		slider3.setPaintTicks(true);
+		slider3.setMinorTickSpacing(5);
+		slider3.setPaintTrack(true);
+		slider3.setMajorTickSpacing(20);
+		slider3.setPaintLabels(true);
+		p1.add(slider1);
+		p2.add(slider2);
+		p3.add(slider3);
+		add(p1);
+		add(p2);
+		add(p3);
+		}
+	}
+class Demo{
+public static void main(String args[]){
+	myFirstFrame f1 =new myFirstFrame();
+	f1.setVisible(true);
+	}
+}
+
+33.
+
+import javax.swing.*;    
+class TableExample {    
+    JFrame f;    
+    TableExample(){    
+    f=new JFrame();    
+    String data[][]={ {" "," "," "," "," "},{" "," "," "," "," "},{" "," "," "," "," "},{" "," "," "," "," "},    
+                          {" "," "," "," "," "},    
+                          {" "," "," ", " "," "}};    
+    String column[]={"Monday","TuesDay","Wendsday","Thursday","Friday"};         
+    JTable jt=new JTable(data,column);    
+    jt.setBounds(30,40,200,300);          
+    JScrollPane sp=new JScrollPane(jt);    
+    f.add(sp);          
+    f.setSize(300,400);    
+    f.setVisible(true);
+   }    
+} 
+class Demo{    
+public static void main(String[] args) {    
+    new TableExample();    
+}    
+}  
+ 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,487 @@
+DARSHANA JAYSANTHA. 65 BATCH
+
+01. 
+
+Class A is the super class of class B and Class C. Class C is the super class of class D and class E
+
+
+Class A {
+    //code here
+}
+
+Class B extends A{
+    //code here
+}
+
+Class C extends A{
+    //code here
+}
+
+Class D extends C{
+    //code here
+}
+
+Class E extends C{
+    //code here
+}
+
+
+02. The process of obtaining the data and methods from one class to another class is known as inheritance
+
+Ex:
+
+* Automobiles and Pulled Vehicles are subclasses of Vehicles.
+* Vehicles are the superclass of Automobiles and pulled Vehicles.
+Those subclasses have some common features of vehicals (such as have wheels, ability to trasport some thing etc) instead of their specific features.
+
+* Car and Bus are sub-classes of Automobiles.
+* Automobiles are the superclass of Car and Bus.
+Those subclasses havesome common features of automobiles such as motor driven.  
+
+03. when we want to create a new class and there is already a class that includes some of the code that we want, we can derive our new class from the existing class. By doing this, we are reusing the fields and methods of the existing class. So we can avoid the duplication of common functionality.
+
+When a subclass overrides a method in super class then subclass method definition can specify all or subset of exceptions classes in the throws clause of the parent class method
+
+So using inheritance like that, we can save the time.
+
+04. 
+
+Class Student {
+    //code here
+}
+
+Class GraduateStudent extends Student{
+    //code here
+}
+
+Class UnderGratuateStudent extends Student{
+    //code here
+}
+
+-----------------------------------------------------
+
+Class Shape {
+    //code here
+}
+
+Class Circle extends Shape{
+    //code here
+}
+
+Class Triangle extends Shape{
+    //code here
+}
+
+Class Rectangle extends Shape{
+    //code here
+}
+
+Class Sphere extends Shape{
+    //code here
+}
+
+Class Cube extends Shape{
+    //code here
+}
+
+-----------------------------------------------------------
+
+Class Loan {
+    //code here
+}
+
+Class CarLoan extends Loan{
+    //code here
+}
+
+Class HomeImprovementLoan extends Loan{
+    //code here
+}
+
+Class MortgageLoan extends Loan{
+    //code here
+}
+
+--------------------------------------------------------------
+
+Class BankAccount {
+    //code here
+}
+
+Class CheckingAccount extends BankAccount{
+    //code here
+}
+
+Class SavingsAccount extends BankAccount{
+    //code here
+}
+
+
+05.
+
+Class Shape {
+    //code here
+}
+
+Class TwoDimensionalShape extends Shape{
+    //code here
+}
+
+Class ThreeDimensionalShape extends Shape{
+    //code here
+}
+
+Class Circle extends TwoDimensionalShape{
+    //code here
+}
+
+Class Square extends TwoDimensionalShape{
+    //code here
+}
+
+Class Triangle extends TwoDimensionalShape{
+    //code here
+}
+
+Class Sphere extends ThreeDimensionalShape{
+    //code here
+}
+
+Class Cube extends ThreeDimensionalShape{
+    //code here
+}
+
+Class Tetrahedron extends ThreeDimensionalShape{
+    //code here
+}
+
+
+06. Please find the attached image 'Assignment03_Q6.png'
+
+Class Student {
+    //code here
+}
+
+Class UndergraduateStudent extends Student{
+    //code here
+}
+
+Class GraduateStudent extends Student{
+    //code here
+}
+
+Class Junior extends UndergraduateStudent{
+    //code here
+}
+
+Class Senior extends UndergraduateStudent{
+    //code here
+}
+
+Class Freshman extends UndergraduateStudent{
+    //code here
+}
+
+Class Sophomore extends UndergraduateStudent{
+    //code here
+}
+
+Class DoctoralStudent extends GraduateStudent{
+    //code here
+}
+
+Class MastersStudent extends GraduateStudent{
+    //code here
+}
+
+
+07. 
+
+
+public class Point{
+
+    // x,y coordinate
+    private int x; 
+    private int y; 
+
+    public Point( int xCoordinate, int yCoordinate ){
+        x = xCoordinate; // set x
+        y = yCoordinate; // set y
+    } 
+
+    public int getX(){
+        return x;
+    } 
+
+    public int getY(){
+        return y;
+    } 
+
+    public String toString(){
+        return String.format( "( %s, %s )", getX(), getY() );
+    }
+} 
+
+--------------------------------------------------------------
+
+public class Quadrilateral{
+
+    //4 endponts
+    private Point point1; 
+    private Point point2; 
+    private Point point3; 
+    private Point point4; 
+
+    public Quadrilateral( int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4 ){
+        point1 = new Point( x1, y1 );
+        point2 = new Point( x2, y2 );
+        point3 = new Point( x3, y3 );
+        point4 = new Point( x4, y4 );
+    } 
+
+    public Point getPoint1(){
+        return point1;
+    }
+
+    public Point getPoint2(){
+        return point2;
+    } 
+
+    public Point getPoint3(){
+        return point3;
+    } 
+
+    public Point getPoint4(){
+        return point4;
+    } 
+
+    public String toString(){
+        return String.format( "%s:\n%s","Coordinates of Quadrilateral ", getCoordinatesAsString() );
+    }
+
+    public String getCoordinatesAsString(){
+        return String.format("%s, %s, %s, %s\n", point1, point2, point3, point4 );
+    }
+}
+
+-----------------------------------------------------------------------------------------------------
+
+
+public class Trapezoid extends Quadrilateral{
+
+    private int height;
+
+    public Trapezoid( int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4 ){
+        super( x1, y1, x2, y2, x3, y3, x4, y4 );
+    } 
+
+    public double getHeight(){
+        if ( getPoint1().getY() == getPoint2().getY() )
+            return Math.abs( getPoint2().getY() - getPoint3().getY() );
+        else
+            return Math.abs( getPoint1().getY() - getPoint2().getY() );
+    }
+
+    public double getArea(){
+        return getSumOfTwoSides() * getHeight() / 2.0;
+    } 
+
+    public double getSumOfTwoSides(){
+        if ( getPoint1().getY() == getPoint2().getY() )
+            return Math.abs( getPoint1().getX() - getPoint2().getX() ) + Math.abs( getPoint3().getX() - getPoint4().getX() );
+        else
+            return Math.abs( getPoint2().getX() - getPoint3().getX() ) + Math.abs( getPoint4().getX() - getPoint1().getX() );
+    } 
+
+    public String toString(){
+        return String.format( "\n%s:\n%s%s: %s\n%s: %s\n","Coordinates of Trapezoid  ", getCoordinatesAsString(),"Height is", getHeight(),"Area is", getArea() );
+    } 
+} 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+public class Parallelogram extends Trapezoid{
+
+    public Parallelogram( int x1, int y1, int x2, int y2,int x3, int y3, int x4, int y4 ){
+        super( x1, y1, x2, y2, x3, y3, x4, y4 );
+    } 
+
+    public double getWidth(){
+        if ( getPoint1().getY() == getPoint2().getY() )
+            return Math.abs( getPoint1().getX() - getPoint2().getX() );
+        else
+            return Math.abs( getPoint2().getX() - getPoint3().getX() );
+        } 
+
+    public String toString(){
+        return String.format( "\n%s:\n%s%s: %s\n%s: %s\n%s: %s\n","Coordinates of Parallelogram ", getCoordinatesAsString(),"Width is", getWidth(), "Height is", getHeight(),"Area is", getArea() );
+    } 
+} 
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+public class Rectangle extends Parallelogram{
+
+    public Rectangle( int x1, int y1, int x2, int y2,int x3, int y3, int x4, int y4 ){
+        super( x1, y1, x2, y2, x3, y3, x4, y4 );
+    }
+
+    public String toString(){
+        return String.format( "\n%s:\n%s%s: %s\n%s: %s\n%s: %s\n","Coordinates of Rectangle ", getCoordinatesAsString(),"Width is",getWidth(), "Height is", getHeight(), "Area is", getArea() );
+    } 
+} 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+public class Square extends Parallelogram{
+
+    public Square( int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4 ){
+        super( x1, y1, x2, y2, x3, y3, x4, y4 );
+    } 
+
+    public String toString(){
+        return String.format( "\n%s:\n%s%s: %s\n%s: %s\n","Coordinates of Square ", getCoordinatesAsString(),"Side is", getHeight(), "Area is", getArea() );
+    } 
+} 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+public class QuadrilateralMain{
+    public static void main( String args[] ){
+
+        Quadrilateral quadrilateral = new Quadrilateral( 1, 1, 5, 2, 4, 8, 2, 4);
+        Trapezoid trapezoid = new Trapezoid( 2, 0, 12, 0, 10, 6, 6, 6);
+        Parallelogram parallelogram = new Parallelogram( 6, 6, 12, 6, 13, 21, 7, 21 );
+        Rectangle rectangle = new Rectangle( 16, 13, 29, 13, 29, 27, 16, 27 );
+        Square square = new Square( 6, 2, 10, 2, 10, 6, 6, 6 );
+
+        System.out.printf("%s %s %s %s %s\n", quadrilateral, trapezoid, parallelogram, rectangle, square );
+    } 
+} 
+
+
+08. 
+
+Here we can see Jframe class is extended by CalculatorView class. So CalculatorView class can retain all the functionalities of Jframe class. You can see setSize(), setTitle(), setDefaultCloseOperation(), setVisible() methods and all of those are written in JFrame class. 
+
+If we not extend JFrame class we have to write all the methods here again. By extending Jframe class we reuse methods of Jframe in CalculatorView class. This is inheritance. Here Jframe is the super class.
+
+09. A,B,C,D,F
+
+10. Line 2, Line 4 . Class A isn't extended by Class B. So, in Class B we can't use Class A's properties.
+
+11. B
+
+12. C, D
+
+13. A, B
+
+14. 
+
+./B.java:1: error: constructor A in class A cannot be applied to given types;
+class B extends A{}
+^
+  required: int
+  found: no arguments
+  reason: actual and formal argument lists different in length
+1 error
+
+15. 
+
+Demo.java:11: error: incompatible types: A cannot be converted to B
+B b2=a1; //Line 9
+     ^
+Demo.java:12: error: incompatible types: C cannot be converted to B
+b2=c1; //Line 10
+   ^
+Demo.java:14: error: incompatible types: A cannot be converted to C
+C c2=a1; //Line 12
+     ^
+Demo.java:15: error: incompatible types: B cannot be converted to C
+c2=b1; //Line 13
+   ^
+Demo.java:16: error: incompatible types: D cannot be converted to C
+c2=d1; //Line 14
+   ^
+Demo.java:17: error: incompatible types: A cannot be converted to D
+D d2=a1; //Line 15
+     ^
+Demo.java:18: error: incompatible types: B cannot be converted to D
+d2=b1; //Line 16
+   ^
+Demo.java:19: error: incompatible types: C cannot be converted to D
+d2=c1; //Line 17
+   ^
+8 errors
+
+16. B
+
+17. D
+
+18. no answers
+
+19. 
+
+Demo.java:7: error: constructor Super in class Super cannot be applied to given types;
+public Sub(int i){
+                 ^
+  required: int
+  found: no arguments
+  reason: actual and formal argument lists differ in length
+1 error
+
+20. B, E , F  | Class Super is extended by Class Sub. So, In Class Sub we can use Class Super's methods and attributes.
+
+21. the superclass constructor can be called from the first line of a subclass constructor by using the special keyword super() and passing appropriate parameters
+
+Ex: 
+
+public class Employee extends Person
+{
+    public Employee()
+    {
+        super(); // calls the Person() constructor
+    }
+    public Employee(String theName)
+    {
+        super(theName); // calls Person(theName) constructor
+    }
+}
+
+22. Variables in Java do not follow polymorphism. Overriding is only applicable to methods but not to variables. In Java, if the child and parent class both have a variable with the same name, Child class’s variable hides the parent class’s variable, even if their types are different. This concept is known as Variable Hiding.
+
+Ex: 
+
+// Parent class
+class Parent {
+	// Declaring instance variable by name `a`
+	int a = 10;
+
+	public void print(){
+		System.out.println("inside B superclass");
+	}
+}
+
+// Child class
+class Child extends Parent {
+
+	// Hiding Parent class's variable `a` by defining a variable in child class with same name.
+	int a = 20;
+
+	// Method defined inside child class
+	public void print(){
+		System.out.println("inside C subclass");
+	}
+}
+
+23. 
+
+24. F
+
+25. find the attached image 'Assignment03_Q25.png'
+
